@@ -1,33 +1,30 @@
-import random
-import os
+#!/usr/bin/env python3
+import random, string
 
-magenta = "\033[0;35m"
-yellow  = "\033[0;33m"
-green   = "\033[0;32m"
-cyan    = "\033[0;36m"
-red     = "\033[0;31m"
-white   = "\033[0;37m"
+class GenerateKey:
 
-global length 
-global res
+    def __init__(self, string_size: int, string_upper: str, string_lower: str, string_digits: str):
+        self.string_digits = string_digits
+        self.string_lower = string_lower
+        self.string_upper = string_upper
+        self.string_size = string_size
 
-os.system("cls")
-try:
-    length = int(input(red + "(" + cyan + "Password length" + red + ")" + magenta + "$ "))
-except ValueError as ve:
-    print(red + f"You need to enter a string!\n{ve}")
+    def gen_rand_str(self):
+        upper   = self.string_upper
+        lower   = self.string_lower
+        digit   = self.string_digits
+        rands   = "!§$%&/()=?{}][-_,;.:"
+        mixgs   = upper + lower + digit + rands
+        ssize   = self.string_size
+        shuffle = random.sample(mixgs, ssize)
+        print("".join(shuffle))
 
-numbers = "1234567890"
-lowers  = "abcdefghijklmnopqrstuvwxyz"
-uppers  = "ABVDEFGHIJKLMNOPQRSTUVWXYZ"
-special = "§$%&/()=}[{]?!_.,;:" 
-mixer   = numbers + lowers + uppers + special
+if __name__ == "__main__":
+    genKey = GenerateKey(
+        24,
+        string.ascii_uppercase,
+        string.ascii_lowercase,
+        string.digits
+    )
+    genKey.gen_rand_str()
 
-try:
-    res     = random.sample(mixer, length)
-except ValueError as ve:
-    print(red + f"You need to enter a string!\n{ve}")
-
-finalp  = ''.join(res)
-print(green + "\nYour generated password: " + f"{finalp}\n" + white)
-input(cyan  + "Press any key to continue" )
