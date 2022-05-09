@@ -34,7 +34,7 @@ class GenerateKey:
         mixgs   = upper + lower + digit + rands
         ssize   = self.string_size
         shuffle = random.sample(mixgs, ssize)
-        print(f"Your password: {''.join(shuffle)}")
+        print(f"Your password: {"".join(shuffle)}")
 
 if __name__ == "__main__":
     string_size = int(input("Enter the length of your password: "))
