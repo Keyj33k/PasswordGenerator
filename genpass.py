@@ -22,9 +22,9 @@ class GenerateKey:
             string_digits: str
     ):
         self.string_digits = string_digits
-        self.string_lower = string_lower
-        self.string_upper = string_upper
-        self.string_size = string_size
+        self.string_lower  = string_lower
+        self.string_upper  = string_upper
+        self.string_size   = string_size
 
     def gen_rand_str(self):
         upper   = self.string_upper
