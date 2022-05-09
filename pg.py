@@ -3,7 +3,13 @@ import random, string
 
 class GenerateKey:
 
-    def __init__(self, string_size: int, string_upper: str, string_lower: str, string_digits: str):
+    def __init__(
+            self,
+            string_size: int,
+            string_upper: str,
+            string_lower: str,
+            string_digits: str
+    ):
         self.string_digits = string_digits
         self.string_lower = string_lower
         self.string_upper = string_upper
