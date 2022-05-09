@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
 import random, string
 
+# # # # # # # # # # # # # # # # # # # # # #
+#                                         #
+#   Author  :   Keyj33k                   #
+#   Contact :   nomotikag33n@gmail.com    #
+#   Twitter :   @keyjeek                  #
+#   Github  :   @keyj33k                  #
+#   Insta   :   @keyjeek                  #
+#   Version :   1.0.1                     #
+#                                         #
+# # # # # # # # # # # # # # # # # # # # # #
+
 class GenerateKey:
 
     def __init__(
