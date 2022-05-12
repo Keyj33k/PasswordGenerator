@@ -9,7 +9,7 @@ git clone https://github.com/Keyj33k/PasswordGenerator.git
 ```
 cd PasswordGenerator
 ```
-- Run the code:
+- Generate a random password:
 ```
 python3 passgen.py
 ```
