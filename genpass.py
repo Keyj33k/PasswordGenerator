@@ -16,9 +16,9 @@ class GenerateKey:
 
     def __init__(
             self,
-            string_size: int,
-            string_upper: str,
-            string_lower: str,
+            string_size  : int,
+            string_upper : str,
+            string_lower : str,
             string_digits: str
     ):
         self.string_digits = string_digits
@@ -36,8 +36,8 @@ class GenerateKey:
         shuffle = random.sample(mixgs, ssize)
         print(f"Your password: {''.join(shuffle)}")
 
-if __name__ == "__main__":
-    string_size = int(input("Enter the length of your password: "))
+if __name__        == "__main__":
+    string_size    = int(input("Enter the length of your password: "))
     if string_size <= 7:
         print(f"{string_size} is too short.")
         sys.exit(1)
