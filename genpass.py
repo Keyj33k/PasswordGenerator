@@ -37,7 +37,11 @@ class GenerateKey:
         print(f"Your password: {''.join(shuffle)}")
 
 if __name__        == "__main__":
-    string_size    = int(input("Enter the length of your password: "))
+    string_size    = int(
+        input(
+            "Enter the length of your password: "
+        )
+    )
     if string_size <= 7:
         print(f"{string_size} is too short.")
         sys.exit(1)
