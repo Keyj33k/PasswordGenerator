@@ -43,8 +43,6 @@ if __name__        == "__main__":
     if string_size <= 7:
         print(f"{string_size} is too short.")
         sys.exit(1)
-    else:
-        pass
 
     genKey = GenerateKey(
         string_size,
