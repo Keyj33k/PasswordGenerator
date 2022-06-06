@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import random, string, sys
 
 # # # # # # # # # # # # # # # # # # # # # #
@@ -34,8 +35,8 @@ class GenerateKey:
         shuffle = random.sample(mixgs, ssize)
         print(f"Your password: {''.join(shuffle)}")
 
-if __name__        == "__main__":
-    string_size    = int(
+if __name__ == "__main__":
+    string_size = int(
         input(
             "Enter the length of your password: "
         )
