@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
-import random, string, sys
+import random
+import string
+import sys
 
 # # # # # # # # # # # # # # # # # # # # # #
 #                                         #
@@ -10,6 +12,7 @@ import random, string, sys
 #   Version :   1.0.1                     #
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # #
+
 
 class GenerateKey:
 
@@ -33,14 +36,12 @@ class GenerateKey:
         mixgs   = upper + lower + digit + rands
         ssize   = self.string_size
         shuffle = random.sample(mixgs, ssize)
+        
         print(f"Your password: {''.join(shuffle)}")
 
 if __name__ == "__main__":
-    string_size = int(
-        input(
-            "Enter the length of your password: "
-        )
-    )
+    string_size = int(input("Enter the length of your password: "))
+    
     if string_size <= 7:
         print(f"{string_size} is too short.")
         sys.exit(1)
@@ -51,4 +52,5 @@ if __name__ == "__main__":
         string.ascii_lowercase,
         string.digits
     )
+    
     genKey.gen_rand_str()
