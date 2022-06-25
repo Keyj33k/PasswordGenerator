@@ -5,9 +5,7 @@ Simple python3 password generator.
 ```
 git clone https://github.com/Keyj33k/PasswordGenerator.git
 ```
-- Now you need to navigate to the Hatake directory.
-
-- Run the password generator:
+- Now you need to navigate to the Hatake directory and run the password generator:
 ```
 python3 passgen.py
 ```
