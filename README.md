@@ -2,10 +2,19 @@
 Simple python3 password generator.
 
 ### USAGE:
+- Clone the repo:
 ```
 git clone https://github.com/Keyj33k/PasswordGenerator.git
 ```
-- Now you need to navigate to the PasswordGenerator directory and run the password generator:
+- Change current directory:
+```
+cd PasswordGenerator
+```
+- Install the requirements:
+```
+pip install -r requirements.txt
+```
+- Run the password generator:
 ```
 python3 passgen.py
 ```
