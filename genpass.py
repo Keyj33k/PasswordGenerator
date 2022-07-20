@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from pyfiglet import figlet_format
+from time import sleep
 import random
 import string
 import sys
@@ -12,6 +14,11 @@ import sys
 #   Version :   1.0.1                     #
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # #
+
+g = "\033[0;32m"
+c = "\033[0;36m"
+y = "\033[0;93m"
+w = "\033[0;37m"
 
 
 class GenerateKey:
@@ -32,25 +39,41 @@ class GenerateKey:
         upper = self.string_upper
         lower = self.string_lower
         digit = self.string_digits
-        rands = "!§$%&/()=?{}][-_,;.:"
+        rands = "!$%&/()?{}][-_"
         mixgs = upper + lower + digit + rands
         ssize = self.string_size
         shuffle = random.sample(mixgs, ssize)
-        
-        print(f"Your password: {''.join(shuffle)}")
+
+        sleep(0.75)
+
+        print("=" * 50)
+        print(f"{w}[{g}+{w}] Your password: {''.join(shuffle)}")
+        print("=" * 50)
+
 
 if __name__ == "__main__":
-    string_size = int(input("Enter the length of your password: "))
-    
-    if string_size <= 7:
-        print(f"{string_size} is too short.")
+    print(figlet_format("Password\nGenerator\n") + "=" * 50)
+
+    try:
+        string_size_ = int(input(f"{w}[{c}*{w}] Enter the length of your password: "))
+        if string_size_ <= 7:
+            print(f"{w}[{y}-{w}] {string_size_} is too short.")
+            sys.exit(1)
+
+        genKey = GenerateKey(
+            string_size_,
+            string.ascii_uppercase,
+            string.ascii_lowercase,
+            string.digits
+        )
+
+        genKey.gen_rand_str()
+    except ValueError:
+        print(f"{w}[{y}-{w}] You need to enter a integer value!")
         sys.exit(1)
 
-    genKey = GenerateKey(
-        string_size,
-        string.ascii_uppercase,
-        string.ascii_lowercase,
-        string.digits
-    )
-    
-    genKey.gen_rand_str()
+    sleep(0.75)
+
+    print(f"{w}[{c}*{w}] Done.")
+
+    sys.exit(0)
