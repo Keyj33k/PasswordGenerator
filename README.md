@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 - Run the password generator:
 ```
-python3 passgen.py
+python3 genpass.py
 ```
 ---
 ![pypy](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/pypy.jpeg)
