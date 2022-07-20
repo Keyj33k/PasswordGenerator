@@ -11,7 +11,7 @@ import sys
 #   Author  :   Keyj33k                   #
 #   Contact :   nomotikag33n@gmail.com    #
 #   Github  :   @keyj33k                  #
-#   Version :   1.0.1                     #
+#   Version :   1.0.2                     #
 #                                         #
 # # # # # # # # # # # # # # # # # # # # # #
 
