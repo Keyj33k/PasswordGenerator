@@ -2,9 +2,9 @@
 
 from pyfiglet import figlet_format
 from time import sleep
+from sys import exit
 import random
 import string
-import sys
 
 # # # # # # # # # # # # # # # # # # # # # #
 #                                         #
@@ -58,7 +58,7 @@ if __name__ == "__main__":
         string_size_ = int(input(f"{w}[{c}*{w}] Enter the length of your password: "))
         if string_size_ <= 7:
             print(f"{w}[{y}-{w}] {string_size_} is too short.")
-            sys.exit(1)
+            exit(1)
 
         genKey = GenerateKey(
             string_size_,
@@ -70,10 +70,10 @@ if __name__ == "__main__":
         genKey.gen_rand_str()
     except ValueError:
         print(f"{w}[{y}-{w}] You need to enter a integer value!")
-        sys.exit(1)
+        exit(1)
 
     sleep(0.75)
 
     print(f"{w}[{c}*{w}] Done.")
 
-    sys.exit(0)
+    exit(0)
