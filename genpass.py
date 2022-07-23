@@ -71,9 +71,10 @@ if __name__ == "__main__":
     except ValueError:
         print(f"{w}[{y}-{w}] You need to enter a integer value!")
         exit(1)
+    except KeyboardInterrupt:
+        print(f"\n{w}[{r}-{w}] Ctrl+C pressed, Exit Password-Generator.")
+        exit(1)
 
     sleep(0.75)
-
     print(f"{w}[{c}*{w}] Done.")
-
     exit(0)
