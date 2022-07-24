@@ -25,9 +25,6 @@ python3 genpass.py
 ![banner](https://github.com/Keyj33k/PasswordGenerator/blob/main/img/pgdemo.gif?raw=true)
 
 ---
-![pypy](https://raw.githubusercontent.com/Keyj33k/profiles/main/profile/pypy.jpeg)
----
----
   
 - Tested on 5.18.0-kali3-amd64, 5.15.0-41-generic-Ubuntu
   
